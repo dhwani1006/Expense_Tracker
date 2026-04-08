@@ -1,4 +1,28 @@
 {
-  "expenses": [],
-  "$schema": "./node_modules/json-server/schema.json"
+  "expenses": [
+    {
+      "amount": 5000,
+      "category": "Test",
+      "date": "2026-03-23",
+      "id": "hEiJCvxNPLM"
+    },
+    {
+      "amount": 4000,
+      "category": "Test2",
+      "date": "2026-03-23",
+      "id": "NnNsuy8TheM"
+    },
+    {
+      "amount": 5000,
+      "category": "Food",
+      "date": "2026-04-09",
+      "id": "nKbTe_9Rky4"
+    },
+    {
+      "amount": 10000,
+      "category": "Clothes",
+      "date": "2026-04-09",
+      "id": "05EG_UOXap8"
+    }
+  ]
 }

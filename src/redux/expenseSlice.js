@@ -1,8 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API = "http://localhost:5000/expenses";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API = `${BASE_URL}/expenses`;
 
+// GET
 export const fetchExpenses = createAsyncThunk(
   "expenses/fetchExpenses",
   async () => {
@@ -11,6 +13,7 @@ export const fetchExpenses = createAsyncThunk(
   }
 );
 
+// POST
 export const addExpense = createAsyncThunk(
   "expenses/addExpense",
   async (expense) => {
@@ -19,6 +22,7 @@ export const addExpense = createAsyncThunk(
   }
 );
 
+// DELETE
 export const deleteExpense = createAsyncThunk(
   "expenses/deleteExpense",
   async (id) => {
@@ -27,6 +31,7 @@ export const deleteExpense = createAsyncThunk(
   }
 );
 
+// UPDATE
 export const updateExpense = createAsyncThunk(
   "expenses/updateExpense",
   async ({ id, data }) => {
